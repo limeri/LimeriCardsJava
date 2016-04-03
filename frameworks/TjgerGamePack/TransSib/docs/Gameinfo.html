@@ -1,0 +1,105 @@
+<html>
+<head><title>TransSib</title></head>
+<body>
+
+<table width="550" border="0">
+<td align="justify">
+
+<h1>TransSib</h1>
+<h3>Copyright(C) 2003 by Harald Gruber</h3>
+<hr>
+
+<li><a href="#gamerules">1. Game instructions</a></li>
+<li><a href="#gamestart">2. Start the game</a></li>
+
+<hr>
+
+<a name="gamerules"><h2>1. Game instructions</h2></a>
+<li><a href="#gamerules1">1.1. Game objectives</a></li>
+<li><a href="#gamerules2">1.2. Sequence of the game</a></li>
+<li><a href="#gamerules3">1.3. End of the game</a></li>
+
+<a name="gamerules1"><h3>1.1. Game objectives</h3></a>
+For each used city-colour every player get one target city. The objective of the game is
+to connect all of the own cities. If one player has connected all ones, a round has finished.
+These players who didn't connect all of their cities move the number of missing rails forward 
+on the score board. The <a href="#gamerules3">end of the game</a> depends on the configured rules.<br>
+<br>
+Cities that have a white and black border are only used if the specified minimum numbers of players 
+take part at the actual game. If the option "use all cities" is activated, these cities are also used
+if a fewer number of players is taking part.<br>
+
+<a name="gamerules2"><h3>1.2. Sequence of the game</h3></a>
+At the first turn every player sets his piece on any free point of intersection. This can also 
+be a city. The piece is the starting point of the own railway system.<br>
+<br>
+As soon as the pieces are set, the rails will be built. Rails can only be built on unoccupied lines. 
+On a single line this costs one rail, on a double line it costs two rails. The minimum and the maximum 
+number of rails, that can be built per turn, can be configured. Originally: at least one rail and at the 
+most two rails.<br>
+<br>
+Every player only puts rails at the railroad system, where his piece is located. That means, the new 
+rail has to border on the own piece or it has to be connected to it with the help of other rails.<br>
+<br>
+<b>Remarks:</b><br>
+<ul>
+<li>Players are allowed to connect their railroad systems and use them like their own one.</li>
+<li>On every point it's allowed to branch off the own railroad system.</li>
+<li>If a player builds more than one rail, it's allowed to put them on different points of the own railroad system.</li>
+</ul>
+<br>
+
+<a name="gamerules3"><h3>1.3. End of the game</h3></a>
+The end of the game depends on the configured rules.<br>
+<br>
+<b>Win/lose on points:</b><br>
+It can be configured after which number of scores the game is finished. In that case the end 
+of the game is reached as soon as a player crosses this number. Original this number is 12.<br>
+<br>
+Additionally the barrier can be moved after a certain number of rounds. It will be moved in a way 
+that between the player with the most number of scores and the barrier there will only remain a 
+difference of two points. If a player crosses this barrier the end of the game is reached. 
+Originally the barrier will be moved after the 2nd round.<br>
+<br>
+<b>Finish after rounds:</b><br>
+The game can also be finished after a given number of rounds. In that case the scores are only 
+important for the order of the players.<br>
+
+
+<hr>
+
+<a name="gamestart"><h2>2. Start the game</h2></a>
+<li><a href="#gamestart1">2.1. Requirements</a></li>
+<li><a href="#gamestart2">2.2. Start/Execution</a></li>
+
+<a name="gamestart1"><h3>2.1. Requirements</h3></a>
+TransSib and TransMap are programs written in Java, so they 
+need a working java environment (tested with version 1.3.1).<br>
+
+<a name="gamestart2"><h3>2.2. Start/Execution</h3></a>
+
+To start TransSib or TransMap enter the command<br>
+<br>
+<code>java -jar TransSib.jar</code><br>
+<br>
+or<br>
+<br>
+<code>java -jar TransMap.jar</code><br>
+<br>
+in the directory, that contains the ".jar"-files. If there is no entry in 
+the path-variable for the java environment, the command "java" is not known. 
+In that case the full path for the java command has to be entered, e.g.:<br>
+<br>
+<code>C:\Programme\jdk1.3.1\bin\java -jar TransSib.jar</code><br>
+<br>
+If you have registered *.jar-files a double-click on the specified ".jar"-file is enough to start it.
+Important is, that the directory which contains the game has to be the working
+directory, otherwise the game has no access to the maps.<br>
+<br>
+
+</td></table>
+
+</body>
+</html>
+
+

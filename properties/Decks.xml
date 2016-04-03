@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<DeckInfo type="PropertyMap">
+
+    <Pinochle type="PropertyMap">
+        <Cards type="PropertyArray">
+            <item Name="A"  Rank="6" Suit="S" SuitRank="4" NumberInDeck="2" Image="images/playing_cards/card_AS.png"/>
+            <item Name="10" Rank="5" Suit="S" SuitRank="4" NumberInDeck="2" Image="images/playing_cards/card_10S.png"/>
+            <item Name="K"  Rank="4" Suit="S" SuitRank="4" NumberInDeck="2" Image="images/playing_cards/card_KS.png"/>
+            <item Name="Q"  Rank="3" Suit="S" SuitRank="4" NumberInDeck="2" Image="images/playing_cards/card_QS.png"/>
+            <item Name="J"  Rank="2" Suit="S" SuitRank="4" NumberInDeck="2" Image="images/playing_cards/card_JS.png"/>
+            <item Name="9"  Rank="1" Suit="S" SuitRank="4" NumberInDeck="2" Image="images/playing_cards/card_09S.png"/>
+            <item Name="A"  Rank="6" Suit="H" SuitRank="3" NumberInDeck="2" Image="images/playing_cards/card_AH.png"/>
+            <item Name="10" Rank="5" Suit="H" SuitRank="3" NumberInDeck="2" Image="images/playing_cards/card_10H.png"/>
+            <item Name="K"  Rank="4" Suit="H" SuitRank="3" NumberInDeck="2" Image="images/playing_cards/card_KH.png"/>
+            <item Name="Q"  Rank="3" Suit="H" SuitRank="3" NumberInDeck="2" Image="images/playing_cards/card_QH.png"/>
+            <item Name="J"  Rank="2" Suit="H" SuitRank="3" NumberInDeck="2" Image="images/playing_cards/card_JH.png"/>
+            <item Name="9"  Rank="1" Suit="H" SuitRank="3" NumberInDeck="2" Image="images/playing_cards/card_09H.png"/>
+            <item Name="A"  Rank="6" Suit="C" SuitRank="2" NumberInDeck="2" Image="images/playing_cards/card_AC.png"/>
+            <item Name="10" Rank="5" Suit="C" SuitRank="2" NumberInDeck="2" Image="images/playing_cards/card_10C.png"/>
+            <item Name="K"  Rank="4" Suit="C" SuitRank="2" NumberInDeck="2" Image="images/playing_cards/card_KC.png"/>
+            <item Name="Q"  Rank="3" Suit="C" SuitRank="2" NumberInDeck="2" Image="images/playing_cards/card_QC.png"/>
+            <item Name="J"  Rank="2" Suit="C" SuitRank="2" NumberInDeck="2" Image="images/playing_cards/card_JC.png"/>
+            <item Name="9"  Rank="1" Suit="C" SuitRank="2" NumberInDeck="2" Image="images/playing_cards/card_09C.png"/>
+            <item Name="A"  Rank="6" Suit="D" SuitRank="1" NumberInDeck="2" Image="images/playing_cards/card_AD.png"/>
+            <item Name="10" Rank="5" Suit="D" SuitRank="1" NumberInDeck="2" Image="images/playing_cards/card_10D.png"/>
+            <item Name="K"  Rank="4" Suit="D" SuitRank="1" NumberInDeck="2" Image="images/playing_cards/card_KD.png"/>
+            <item Name="Q"  Rank="3" Suit="D" SuitRank="1" NumberInDeck="2" Image="images/playing_cards/card_QD.png"/>
+            <item Name="J"  Rank="2" Suit="D" SuitRank="1" NumberInDeck="2" Image="images/playing_cards/card_JD.png"/>
+            <item Name="9"  Rank="1" Suit="D" SuitRank="1" NumberInDeck="2" Image="images/playing_cards/card_09D.png"/>
+        </Cards>
+    </Pinochle>
+
+</DeckInfo>

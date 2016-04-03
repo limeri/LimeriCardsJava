@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<horule name="Hosn owe">
+    <skiprules allskipnewtalon="0" skiprule="2"/>
+    <lockrules endonsecondlock="0" exchangealllocks="0" lockfirstround="0"/>
+    <tripletrules fire3aces="1" fireallpay="1" tripletrule="1"/>
+    <blitzrules blitzrule="1"/>
+    <stakerules stake="3"/>
+</horule>
