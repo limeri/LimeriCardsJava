@@ -5,16 +5,16 @@ package limeri.cards.pinochle;
  * the game based on the display (console, swing, mobile, whatever).
  */
 
-import java.awt.BorderLayout;
 import java.util.ArrayList;
 
 import limeri.cards.CardRoot;
+import limeri.cards.Constants;
 import limeri.cards.deck.PinochleDeck;
 import limeri.cards.model.PlayerModel;
 
 public abstract class PinochleGame extends CardRoot {
 
-    private int numberOfPlayers = 4;
+    private int numberOfPlayers = Constants.PINOCHLE_INITIAL_PLAYESRS;
     private int numberOfCardsInHand;
     private PinochleDeck deck;
     private ArrayList<PlayerModel> players;
@@ -38,7 +38,7 @@ public abstract class PinochleGame extends CardRoot {
      */
     public ArrayList<PlayerModel> initializePlayers(int numberOfPlayers, String humanName) {
         ArrayList<PlayerModel> players = new ArrayList<PlayerModel>();
-        String[] positions = {BorderLayout.WEST, BorderLayout.NORTH, BorderLayout.EAST, BorderLayout.SOUTH};
+        String[] positions = {Constants.TABLE_POS_WEST, Constants.TABLE_POS_NORTH, Constants.TABLE_POS_EAST, Constants.TABLE_POS_SOUTH};
 
         for (int i = 0; i < numberOfPlayers; i++) {
             PlayerModel player = new PlayerModel();
@@ -67,4 +67,9 @@ public abstract class PinochleGame extends CardRoot {
      * Play a game.
      */
     public abstract void playGame();
+
+    public static void main(String [] args) {
+        PinochleGame pinochle = PinocleGameFactory.getPinochleGame();
+        pinochle.initializeGame();
+    }
 }
