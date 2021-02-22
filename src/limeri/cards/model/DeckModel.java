@@ -66,6 +66,7 @@ public class DeckModel extends Model {
      */
     private PropertyMap getDeckPropertyArray(String deckName) {
         File propertyFile = new File(Constants.DECK_PROPERTIES_PATH);
+
         PropertyMap rootMap = new PropertyMap();
         rootMap.setXMLFile(propertyFile);
         try {

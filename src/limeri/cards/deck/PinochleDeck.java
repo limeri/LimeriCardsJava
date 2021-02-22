@@ -6,7 +6,6 @@ package limeri.cards.deck;
 
 import limeri.cards.controller.DeckController;
 
-//public class PinochleDeck extends Deck {
 public class PinochleDeck extends DeckController {
     public PinochleDeck() {
         super();

@@ -8,7 +8,7 @@ import limeri.cards.CardRoot;
 import limeri.cards.pinochle.PinochleGame;
 import limeri.cards.pinochle.game.*;
 
-public class PinocleGameFactory extends CardRoot {
+public class PinochleGameFactory extends CardRoot {
 
     /**
      * This will choose the display of the game.  For now, always use Swing.

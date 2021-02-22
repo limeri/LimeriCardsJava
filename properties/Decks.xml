@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <DeckInfo type="PropertyMap">
 
-    <CardBacks type="PropertyMap">
+    <CardBacks type="PropertyArray">
         <item Name="CARD_BACK_BLUE_FULL_HORIZONTAL" Image="images/playing_cards_classic/b1fh.png"/>
         <item Name="CARD_BACK_BLUE_FULL_VERTICAL"   Image="images/playing_cards_classic/b1fv.png"/>
         <item Name="CARD_BACK_BLUE_PARTIAL_BOTTOM"  Image="images/playing_cards_classic/b1pb.png"/>

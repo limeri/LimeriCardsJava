@@ -17,7 +17,6 @@ import java.util.*;
 import limeri.cards.Controller;
 import limeri.cards.model.CardModel;
 import limeri.cards.model.DeckModel;
-import limeri.cards.model.HandModel;
 import limeri.cards.model.PlayerModel;
 
 public class DeckController extends Controller {
@@ -41,7 +40,6 @@ public class DeckController extends Controller {
         // Now that the cards are shuffled, we can deal one hand at a time.
         for (Iterator<?> playerIterator = players.iterator(); playerIterator.hasNext();) {
             PlayerModel player = (PlayerModel)playerIterator.next();
-            HandModel hand = new HandModel();
 
             // Deal all of the cards for one hand.
             for (int i = 0; i < cardsPerHand; i++) {
@@ -53,10 +51,9 @@ public class DeckController extends Controller {
                     e.printStackTrace();
                     System.exit(1);
                 }
-                hand.addCard(card);
+                player.addCardToHand(card);
             }
-            hand.sortCards();
-            player.setHand(hand);
+            player.sortHand();
         }
     }
 
