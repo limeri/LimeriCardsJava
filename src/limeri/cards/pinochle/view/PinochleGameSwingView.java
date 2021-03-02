@@ -18,15 +18,15 @@ import limeri.cards.pinochle.*;
 import limeri.cards.pinochle.game.*;
 
 public class PinochleGameSwingView extends GameSwingView {
-    private PinochleGame game;
+    private Pinochle game;
 
     public PinochleGameSwingView() {
         super();
         setTitle("LimeriPinochle");
     }
 
-    public PinochleGame getGame() {return game;}
-    public void setGame(PinochleGame game) {this.game = game;}
+    public Pinochle getGame() {return game;}
+    public void setGame(Pinochle game) {this.game = game;}
 
     @Override
     public void initializeGame() {
@@ -111,7 +111,7 @@ public class PinochleGameSwingView extends GameSwingView {
         player.setName(name + " playing");
         JPanel playerPanel = playerView.getPlayerPanel(player);
 
-        for (Iterator<CardModel> iter = player.getHand().getCurrentHandIterator(); iter.hasNext();) {
+        for (Iterator<CardModel> iter = player.getHandIterator(); iter.hasNext();) {
             CardModel card = (CardModel)iter.next();
             String imagePath = card.getImagePath();
             JLabel cardLabel = new JLabel("");

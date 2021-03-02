@@ -5,7 +5,7 @@ package limeri.cards.pinochle;
  */
 
 import limeri.cards.CardRoot;
-import limeri.cards.pinochle.PinochleGame;
+import limeri.cards.pinochle.Pinochle;
 import limeri.cards.pinochle.game.*;
 
 public class PinochleGameFactory extends CardRoot {
@@ -14,8 +14,8 @@ public class PinochleGameFactory extends CardRoot {
      * This will choose the display of the game.  For now, always use Swing.
      * @return a class representing the game being used
      */
-    public static PinochleGame getPinochleGame() {
-        PinochleGame game = new PinochleSwingGame();
+    public static Pinochle getPinochleGame() {
+        Pinochle game = new PinochleSwingGame();
         return game;
     }
 

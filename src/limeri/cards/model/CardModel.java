@@ -1,6 +1,10 @@
 package limeri.cards.model;
 
+import java.util.Comparator;
+
 import limeri.cards.*;
+import limeri.cards.view.CardFxModel;
+import limeri.cards.view.CardView;
 
 public class CardModel extends Model implements Comparable<CardModel>
 {
@@ -64,4 +68,37 @@ public class CardModel extends Model implements Comparable<CardModel>
         }
     }
 
-} // end class
+}
+
+class CardSorter implements Comparator<CardModel> {
+
+    @Override
+    public int compare(CardModel card1, CardModel card2) {
+        int compareSuitRank = card2.getSuitRank();
+        int mySuitRank      = card1.getSuitRank();
+
+        if (mySuitRank == compareSuitRank) {
+            // If the suits are equal, compare the rank of the cards.
+            int compareRank = card2.getRank();
+            int myRank      = card1.getRank();
+            if (myRank > compareRank) {
+                return 1;
+            }
+            else if (myRank < compareRank) {
+                return -1;
+            }
+            else {
+                return 0;
+            }
+        }
+        else {
+            // Compare the suits.  The suit rank is Spades, Hearts, Clubs, Diamonds.
+            if (mySuitRank > compareSuitRank) {
+                return 1;
+            }
+            else {
+                return -1;
+            }
+        }
+    }
+}

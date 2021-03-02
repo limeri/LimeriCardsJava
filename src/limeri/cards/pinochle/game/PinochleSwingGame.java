@@ -27,10 +27,10 @@ import java.util.ArrayList;
 
 import limeri.cards.deck.PinochleDeck;
 import limeri.cards.model.PlayerModel;
-import limeri.cards.pinochle.PinochleGame;
+import limeri.cards.pinochle.Pinochle;
 import limeri.cards.pinochle.view.PinochleGameSwingView;
 
-public class PinochleSwingGame extends PinochleGame {
+public class PinochleSwingGame extends Pinochle {
 
     private PinochleGameSwingView gameView;
 
