@@ -1,23 +1,28 @@
 package limeri.cards.pinochle;
 
 import java.util.ArrayList;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
- * This is the driver for the Pinochle game.  This class will get the game initialized.  It is up
- * to the initializer to enable the player to start a game.
+ * Test version of Pinochle game that uses PropertyReader-based deck classes
+ * and log4j for logging.
  */
 
-import limeri.cards.controller.GameController;
+import limeri.cards.controller.SimpleGameController;
 import limeri.cards.controller.HandDisplayController;
 import limeri.cards.Constants;
-import limeri.cards.deck.PinochleDeck;
+import limeri.cards.deck.SimplePinochleDeck;
 import limeri.cards.model.PlayerModel;
 import limeri.cards.view.ConsoleHandDisplay;
 
-public class Pinochle extends GameController {
+public class TestPinochle extends SimpleGameController {
+    
+    private static final Logger logger = LogManager.getLogger(TestPinochle.class);
+    
     private int numberOfPlayers = Constants.PINOCHLE_INITIAL_PLAYERS;
     private int numberOfCardsInHand;
-    private PinochleDeck deck;
+    private SimplePinochleDeck deck;
     private ArrayList<PlayerModel> players;
 
     public int getNumberOfPlayers() {return numberOfPlayers;}
@@ -26,8 +31,8 @@ public class Pinochle extends GameController {
     public int getNumberOfCardsInHand() {return numberOfCardsInHand;}
     public void setNumberOfCardsInHand(int numberOfCardsInHand) {this.numberOfCardsInHand = numberOfCardsInHand;}
 
-    public PinochleDeck getDeck() {return deck;}
-    public void setDeck(PinochleDeck deck) {this.deck = deck;}
+    public SimplePinochleDeck getDeck() {return deck;}
+    public void setDeck(SimplePinochleDeck deck) {this.deck = deck;}
 
     public ArrayList<PlayerModel> getPlayers() {return players;}
     public void setPlayers(ArrayList<PlayerModel> players) {this.players = players;}
@@ -36,11 +41,10 @@ public class Pinochle extends GameController {
      * Set up the deck and the players.
      */
     public void initializeGame() {
-        PinochleDeck deck = new PinochleDeck();
+        SimplePinochleDeck deck = new SimplePinochleDeck();
         setDeck(deck);
         setNumberOfCardsInHand(this.deck.getNumberOfCardsInDeck()/getNumberOfPlayers());
         setPlayers(initializePlayers(getNumberOfPlayers(), "Henry"));
-//      PinochleGame pinochle = PinochleGameFactory.getPinochleGame();
     }
 
     /**
@@ -48,12 +52,11 @@ public class Pinochle extends GameController {
      */
     public void dealCards() {
         if (deck != null && players != null && !players.isEmpty()) {
-            System.out.println("Dealing " + getNumberOfCardsInHand() + " cards to each of " + 
-                             getNumberOfPlayers() + " players...");
+            logger.info("Dealing {} cards to each of {} players...", getNumberOfCardsInHand(), getNumberOfPlayers());
             deck.deal(players, getNumberOfCardsInHand());
-            System.out.println("All " + deck.getNumberOfCardsInDeck() + " cards have been dealt.");
+            logger.info("All {} cards have been dealt.", deck.getNumberOfCardsInDeck());
         } else {
-            System.out.println("Error: Cannot deal cards. Deck or players not properly initialized.");
+            logger.error("Cannot deal cards. Deck or players not properly initialized.");
         }
     }
     
@@ -64,9 +67,11 @@ public class Pinochle extends GameController {
      */
     public void displayHands(int gameMode) {
         if (players == null || players.isEmpty()) {
-            System.out.println("Error: No players found to display hands.");
+            logger.error("No players found to display hands.");
             return;
         }
+        
+        logger.info("Displaying hands in {} mode", gameMode == Constants.OPEN_HAND ? "OPEN" : "CLOSED");
         
         HandDisplayController displayController = new HandDisplayController();
         displayController.setGameHandAccess(gameMode);
@@ -89,18 +94,18 @@ public class Pinochle extends GameController {
      * @param args
      */
     public static void main(String [] args) {
-        System.out.println("=== PINOCHLE GAME INITIALIZATION ===");
+        logger.info("=== PINOCHLE GAME INITIALIZATION ===");
         
-        Pinochle pinochle = new Pinochle();
+        TestPinochle pinochle = new TestPinochle();
         pinochle.initializeGame();
         
         // Play the game (deal cards and show in closed mode)
         pinochle.playGame();
         
         // Also demonstrate open hand mode
-        System.out.println("\n\n=== OPEN HAND MODE DEMONSTRATION ===");
+        logger.info("=== OPEN HAND MODE DEMONSTRATION ===");
         pinochle.displayHands(Constants.OPEN_HAND);
         
-        System.out.println("\n=== GAME COMPLETED ===");
+        logger.info("=== GAME COMPLETED ===");
     }
 }

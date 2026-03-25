@@ -13,8 +13,8 @@ public class PlayerSwingView extends PlayerView {
 
     public JPanel getPlayerPanel(PlayerModel player) {
         JPanel playerPanel = new JPanel();
-        LayoutManager layout = TableSwingView.getLayout(player.getTablePosition());
-        playerPanel.setLayout(layout);
+//        LayoutManager layout = TableSwingView.getLayout(player.getTablePosition());
+//        playerPanel.setLayout(layout);
 //        String direction = player.getTablePosition();
 //        if (direction.equals(BorderLayout.NORTH) || direction.equals(BorderLayout.SOUTH)) {
 //            playerPanel.setPreferredSize(new Dimension(50, 100));
@@ -37,26 +37,26 @@ public class PlayerSwingView extends PlayerView {
     }
 
     //TODO: delete
-    public JPanel del_getPlayerPanel(PlayerModel player) {
-        String playerName  = player.getName();
-        JPanel playerPanel = new JPanel();
-        LayoutManager layout = TableSwingView.getLayout(player.getTablePosition());
-        playerPanel.setLayout(layout);
-        playerPanel.setName("PlayerPanel_" + playerName);
-        JLabel playerLabel = new JLabel(playerName);
-        String direction = player.getTablePosition();
-        if (direction.equals(BorderLayout.NORTH) || direction.equals(BorderLayout.SOUTH)) {
-            playerPanel.setPreferredSize(new Dimension(50, 100));
-        }
-        else if (direction.equals(BorderLayout.EAST) || direction.equals(BorderLayout.WEST)) {
-            playerPanel.setPreferredSize(new Dimension(150, 50));
-        }
-        else {
-            playerPanel.setPreferredSize(new Dimension(60, 60));
-        }
-        playerPanel.add(playerLabel);
-        return playerPanel;
-    }
+//    public JPanel del_getPlayerPanel(PlayerModel player) {
+//        String playerName  = player.getName();
+//        JPanel playerPanel = new JPanel();
+////        LayoutManager layout = TableSwingView.getLayout(player.getTablePosition());
+//        playerPanel.setLayout(layout);
+//        playerPanel.setName("PlayerPanel_" + playerName);
+//        JLabel playerLabel = new JLabel(playerName);
+//        String direction = player.getTablePosition();
+//        if (direction.equals(BorderLayout.NORTH) || direction.equals(BorderLayout.SOUTH)) {
+//            playerPanel.setPreferredSize(new Dimension(50, 100));
+//        }
+//        else if (direction.equals(BorderLayout.EAST) || direction.equals(BorderLayout.WEST)) {
+//            playerPanel.setPreferredSize(new Dimension(150, 50));
+//        }
+//        else {
+//            playerPanel.setPreferredSize(new Dimension(60, 60));
+//        }
+//        playerPanel.add(playerLabel);
+//        return playerPanel;
+//    }
 
     public void del_addPlayerName(JPanel playerPanel, PlayerModel player) {
         String playerName = player.getName();

@@ -18,6 +18,12 @@ public class PlayerModel extends Model {
     private String name;
     private int playerType;
     private String tablePosition;
+    private int handAccess = limeri.cards.Constants.CLOSED_HAND;
+    
+    public PlayerModel() {
+        hand = new ArrayList<CardModel>();
+        originalHand = new ArrayList<CardModel>();
+    }
 
     public ArrayList<CardModel> getHand() {return hand;}
     public void setHand(ArrayList<CardModel> hand) {this.hand = hand;}
@@ -33,6 +39,9 @@ public class PlayerModel extends Model {
 
     public String getTablePosition() {return tablePosition;}
     public void setTablePosition(String tablePosition) {this.tablePosition = tablePosition;}
+
+    public int getHandAccess() {return handAccess;}
+    public void setHandAccess(int handAccess) {this.handAccess = handAccess;}
 
     /**
      * Add a card to the player's hand.

@@ -4,18 +4,12 @@ import java.util.ArrayList;
 
 import limeri.cards.Constants;
 import limeri.cards.Controller;
-import limeri.cards.controller.DeckController;
-import limeri.cards.deck.PinochleDeck;
 import limeri.cards.model.PlayerModel;
 
-public class GameController extends Controller {
-    private DeckController deck;
+public class SimpleGameController extends Controller {
     private int numberOfPlayers = Constants.PINOCHLE_INITIAL_PLAYERS;
     private int numberOfCardsInHand;
-    private ArrayList <PlayerModel> players;
-
-    public DeckController getDeck() {return deck;}
-    public void setDeck(DeckController deck) {this.deck = deck;}
+    private ArrayList<PlayerModel> players;
 
     public int getNumberOfPlayers() {return numberOfPlayers;}
     public void setNumberOfPlayers(int numberOfPlayers) {this.numberOfPlayers = numberOfPlayers;}
@@ -25,12 +19,6 @@ public class GameController extends Controller {
 
     public ArrayList<PlayerModel> getPlayers() {return players;}
     public void setPlayers(ArrayList<PlayerModel> players) {this.players = players;}
-
-    public void initialize(DeckController deck) {
-        setDeck(new PinochleDeck());
-        setNumberOfCardsInHand(this.deck.getNumberOfCardsInDeck()/getNumberOfPlayers());
-        setPlayers(initializePlayers(getNumberOfPlayers(), "Henry"));
-    }
 
     /**
      * Set up the players in the game.
@@ -54,5 +42,4 @@ public class GameController extends Controller {
         }
         return players;
     }
-
 }

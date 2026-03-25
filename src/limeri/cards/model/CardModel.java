@@ -2,9 +2,7 @@ package limeri.cards.model;
 
 import java.util.Comparator;
 
-import limeri.cards.*;
-import limeri.cards.view.CardFxModel;
-import limeri.cards.view.CardView;
+import limeri.cards.Model;
 
 public class CardModel extends Model implements Comparable<CardModel>
 {

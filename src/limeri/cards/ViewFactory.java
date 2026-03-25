@@ -20,24 +20,13 @@ public class ViewFactory extends CardRoot {
     }
 
     /**
-     * Create a View to display hands on the console.
+    * Create a View to display hands on the console.
      * @param hand a {@link limeri.cards.model.HandModel} object
      * @return a {@link limeri.cards.view.console.HandConsoleView} object
      */
-    public static limeri.cards.view.console.HandConsoleView createHandView(limeri.cards.model.HandModel hand) {
-        limeri.cards.view.console.HandConsoleView handView = new limeri.cards.view.console.HandConsoleView();
-        handView.setModel(hand);
-        return handView;
-    }
-
-    /**
-     * Create a View to display hands on the console.
-     * @param hand a {@link limeri.cards.model.HandModel} object
-     * @return a {@link limeri.cards.view.console.HandConsoleView} object
-     */
-    public static limeri.cards.view.console.PlayerConsoleView createPlayerView(limeri.cards.model.PlayerModel player) {
-        limeri.cards.view.console.PlayerConsoleView playerView = new limeri.cards.view.console.PlayerConsoleView();
-        playerView.setModel(player);
-        return playerView;
-    }
+//    public static limeri.cards.view.console.PlayerConsoleView createPlayerView(limeri.cards.model.PlayerModel player) {
+//        limeri.cards.view.console.PlayerConsoleView playerView = new limeri.cards.view.console.PlayerConsoleView();
+//        playerView.setModel(player);
+//        return playerView;
+//    }
 }

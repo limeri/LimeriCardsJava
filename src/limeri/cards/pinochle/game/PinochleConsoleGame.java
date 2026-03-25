@@ -9,11 +9,11 @@ import java.util.Iterator;
 
 import limeri.cards.deck.PinochleDeck;
 import limeri.cards.model.PlayerModel;
-import limeri.cards.pinochle.PinochleGame;
+import limeri.cards.pinochle.Pinochle;
 import limeri.cards.ViewFactory;
-import limeri.cards.view.console.PlayerConsoleView;
+//import limeri.cards.view.console.PlayerConsoleView;
 
-public class PinochleConsoleGame extends PinochleGame {
+public class PinochleConsoleGame extends Pinochle {
 
     /**
      * Play a hand on the console.
@@ -25,8 +25,8 @@ public class PinochleConsoleGame extends PinochleGame {
 
         for (Iterator<PlayerModel> iter = players.iterator(); iter.hasNext();) {
             PlayerModel player = (PlayerModel)iter.next();
-            PlayerConsoleView playerView = (PlayerConsoleView)ViewFactory.createPlayerView(player);
-            playerView.render();
+//            PlayerConsoleView playerView = (PlayerConsoleView)ViewFactory.createPlayerView(player);
+//            playerView.render();
         }
     }
 

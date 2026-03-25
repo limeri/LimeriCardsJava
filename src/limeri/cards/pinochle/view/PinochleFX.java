@@ -1,8 +1,16 @@
+/*
+ * In Eclipse, remember to update VM Arguments with:
+ * --module-path "C:\Program Files\Java\javafx-sdk-20\lib" --add-modules javafx.controls,javafx.fxml
+ * or you get an classNotDef error for Application.
+ */
+
 package limeri.cards.pinochle.view;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -17,16 +25,20 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.Tooltip;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.control.TitledPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
 import limeri.cards.model.CardModel;
 import limeri.cards.view.CardFxModel;
+import limeri.cards.pinochle.controller.PinochleFXGameController;
 
 public class PinochleFX extends Application {
+
+    private static final Logger log = LogManager.getLogger(PinochleFX.class.getName());
 
     private static final int CARD_X_START_POSITION = 10;
     private static final int CARD_Y_START_POSITION = 50;
@@ -39,6 +51,27 @@ public class PinochleFX extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        log.trace("Entering");
+        initializeImageModels();
+        try {
+            PinochleFXGameController fxController = new PinochleFXGameController();
+            fxController.setParentStage(primaryStage);
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("pinochlefxgame.fxml"));
+            loader.setController(fxController);
+            TitledPane root = (TitledPane) loader.load();
+            Scene scene = new Scene(root);
+
+            primaryStage.setScene(scene);
+            primaryStage.setTitle("Pinochle");
+            primaryStage.show();
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void start_del(Stage primaryStage) throws Exception {
         initializeImageModels();
 
         int xpos = CARD_X_START_POSITION;

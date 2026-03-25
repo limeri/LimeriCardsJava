@@ -26,5 +26,5 @@ public class Constants {
     public final static int OPEN_HAND   = 2;
 
     // Initial number of players
-    public final static int PINOCHLE_INITIAL_PLAYESRS = 4;
+    public final static int PINOCHLE_INITIAL_PLAYERS = 4;
 }

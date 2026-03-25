@@ -1,0 +1,49 @@
+<mxfile host="Electron" modified="2023-05-27T15:32:10.084Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="1TSZcm_lQQqmM67SuJ4f" version="21.2.8" type="device">
+  <diagram name="Page-1" id="nBh42wrfXel6PpRegvvG">
+    <mxGraphModel dx="1418" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PmMKySuJ-qcexmJmByim-1" value="Game" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PmMKySuJ-qcexmJmByim-2" value="Play" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="60" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PmMKySuJ-qcexmJmByim-3" value="West&lt;br&gt;Player&lt;br&gt;Image" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="240" width="50" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PmMKySuJ-qcexmJmByim-4" value="East&lt;br&gt;Player&lt;br&gt;Image" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="240" width="50" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PmMKySuJ-qcexmJmByim-5" value="North Player Image" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="389" y="60" width="50" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PmMKySuJ-qcexmJmByim-7" value="South Player Image" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="389" y="470" width="50" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PmMKySuJ-qcexmJmByim-9" value="West Cards" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="155" width="50" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="PmMKySuJ-qcexmJmByim-10" value="East Cards" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="155" width="50" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="PmMKySuJ-qcexmJmByim-12" value="North Cards" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="155" width="250" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="PmMKySuJ-qcexmJmByim-13" value="South Cards" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="400" width="250" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="PmMKySuJ-qcexmJmByim-16" value="Card Play Display Area" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="240" width="250" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="PmMKySuJ-qcexmJmByim-19" value="Score" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PmMKySuJ-qcexmJmByim-20" value="Undo control" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="40" width="140" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

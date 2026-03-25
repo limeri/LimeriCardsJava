@@ -30,7 +30,7 @@ public class PinochleGameSwingView extends GameSwingView {
 
     @Override
     public void initializeGame() {
-        initializeTable();
+//        initializeTable();
         initializePlayers(getGameFrame());
     }
 
@@ -77,15 +77,15 @@ public class PinochleGameSwingView extends GameSwingView {
     /**
      * Initialize the table.
      */
-    private void initializeTable() {
-        // Get the model.
-        TableModel tableModel = new TableModel();
-        tableModel.setPlayers(getGame().getPlayers());
-        TableSwingView tableView = new TableSwingView();
-        tableView.setModel(tableModel);
-        tableView.setGameFrame(getGameFrame());
-        tableView.drawInitialView();
-    }
+//    private void initializeTable() {
+//        // Get the model.
+//        TableModel tableModel = new TableModel();
+//        tableModel.setPlayers(getGame().getPlayers());
+//        TableSwingView tableView = new TableSwingView();
+//        tableView.setModel(tableModel);
+//        tableView.setGameFrame(getGameFrame());
+//        tableView.drawInitialView();
+//    }
 
 
     /**
